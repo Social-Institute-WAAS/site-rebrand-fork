@@ -1,0 +1,31 @@
+//- 404
+extends ../_00-toolbox/templates/master.pug
+
+block append pageTitle
+  - page.title = "Erro 404 - Página Não Encontrada"+" | "+page.name
+  - page.current = "404"
+
+
+block main
+
+  //- NEWSLETTER
+  section.l-section.mb-4#newsletter
+    .container
+      .c-card.c-card--section.c-card-newsletter.mx-auto.bullets.text-center
+        .row.justify-content-center
+          .col-4
+            h1.l-section__title.c-card__title.text-center.m-0
+              span.icon-404.m-0(role='icon')
+              span.sr-only 404
+          .col-4.text-center
+            img(src=`${page.url.image}emoji-scared.svg`, alt="Emoji Assustado")
+        .row.justify-content-center
+          .col-10
+            h2.l-section__title.c-card__title
+              | Página Não Encontrada
+            p Puxa, achamos que essa página pode ter sido removida, ou o link não existe mesmo.
+            p Vamos investigar o que houve. 
+            p Mas, enquanto isso,  
+              strong não desista de navegar  
+              | tente por outros caminhos.
+          

@@ -1,0 +1,81 @@
+.l-footer {
+    background-color: $gray-800;
+    padding: 1.5rem 0 .5rem;
+
+    &__badges {
+        margin-top: 2rem;
+        opacity: .6;
+    }
+    
+    a {
+        &:hover {
+            color: $orange;
+
+        }
+        &.btn {
+            &--ods {
+                &:hover {
+                  color: #29ABE2;
+                }
+            }
+            &--ods-4 {
+                &:hover {
+                  color: #C5192D;
+                }
+              }
+            &--ods-8 {
+                &:hover {
+                    color: #A21942;
+                }
+            }
+        }
+    }
+    &__wrapper {
+        @include media-breakpoint-down(xs){
+            display: flex;
+            flex-direction: column;
+            flex: wrap;
+            justify-content: center;
+        }
+    }
+    &__block {
+        text-align: left;
+        width: 100%;
+        @include media-breakpoint-down(xs){
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .btn {
+                justify-content: center;
+            }
+        }
+    }
+    #logo-waas {
+        height: 120px;
+        margin: 1rem auto;
+        // ORANGE
+        .st0{
+            fill:none;
+            display: none;
+        }
+        // NONE
+        .st1{fill:none;}
+        // BLUE
+        .st2{fill:$gray-400;}
+        // RED
+        .st3{fill:$gray-400;}
+
+    }
+
+    &__title {
+        font-weight: bold;
+    }
+    a {
+        color: $gray-500;
+    }
+    h5,
+    p {
+        color: $gray-600;
+    }
+}

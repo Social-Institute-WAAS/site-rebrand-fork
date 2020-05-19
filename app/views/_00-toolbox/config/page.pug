@@ -1,0 +1,31 @@
+- var page = {}
+
+- page.charset         = "utf-8"
+- page.lang            = "pt-br"
+- page.keywords        = ""
+- page.author          = "WAAS"
+- page.name            = "WAAS - Tecnologia Fortalecendo Jovens"
+  block pageTitle
+    - page.title           = ""
+    - page.description     = ""
+
+- page.viewport        = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+- page.robots          = "index,follow"
+- page.version         = ""
+
+- page.url              = {}
+- page.url.base         = ""
+- page.url.static       = ""
+- page.url.elements     = ""
+- page.url.image        = page.url.static + "images/"
+- page.favicon          = page.url.image + 'favicon.png'
+
+- page.og              = {}
+- page.og.description  = page.description
+- page.og.title        = page.title
+- page.og.url          = page.url.base
+- page.og.type         = "website"
+- page.og.image_width  = "120"
+- page.og.image_height = "100"
+- page.og.image_type   = "image/jpg"
+- page.og.image        = page.url.image + "logo-waas-original.png"

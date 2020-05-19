@@ -1,0 +1,119 @@
+.l-section {
+    $lsc:&;
+    margin: 0 -15px;
+    padding: 0 15px;
+
+    .container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 2rem 0;
+    }
+    @include media-breakpoint-down(md) {
+        .container {
+            padding: 2rem 0px;
+        }
+    }
+    &.bg-blue {
+        background-color: lighten($blue, 15%);
+        &,
+        #{$lsc}__title {
+            color: $white;
+        }
+        position: relative;
+        *{
+            z-index: 1;
+        }
+        // &:after {
+        //     content: '';
+        //     z-index: 0;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100%;
+        //     opacity: .2;
+        //     mix-blend-mode: overlay;
+        //     background-image: url(../images/waas-pattern.png);
+        //     background-position: center;
+        // }
+    }
+    &.bg-orange{
+        background-color: $orange;
+        &,
+        #{$lsc}__title {
+            color: $white;
+        }
+    }
+    &.bg-gray{
+        background-color: $gray-200;
+        &,
+        #{$lsc}__title {
+            color: $gray-600;
+        }
+    }
+    &__img {
+        margin: 0 0 1.5rem;
+        border-radius: $card-border-radius;
+        min-height: 200px;
+        max-height: 300px;
+        position: relative;
+        box-shadow: 0 0 0 .5rem $gray-300;
+        // &::before {
+        //   content: '';
+        //   display: block;
+        //   height: 100%;
+        //   width: 100%;
+        //   position: absolute;
+        //   background-color: lightgray;
+        //   z-index: -1;
+        //   top: 0;
+        //   left: 0;
+        //   right: 0;
+        //   bottom: 0;
+        // }
+        img {
+            object-fit: cover;
+            min-height: 300px;
+            width: 100%;
+        }
+    }
+    &__title {
+        font-weight: 900;
+        color: $gray-600;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem 0;
+        width: 100%;
+        font-size: $h1-font-size;
+        // @include media-breakpoint-down(xs) {
+        //     font-size: 1rem;
+        // }
+        [class^="icon-"] {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+        }
+        span {
+            text-align: center;
+        }
+    }
+    
+    &-partners {
+        &__item {
+            width: 12rem;
+            @include media-breakpoint-down(sm) {
+                width: 9rem;
+            }
+        }
+    }
+
+    &-busca {
+        #{$lsc}__title{
+            //font-size: 1.5rem;
+            @include media-breakpoint-down(sm) {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

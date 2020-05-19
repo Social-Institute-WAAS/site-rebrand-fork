@@ -1,0 +1,283 @@
+.c-nav {
+  transition: all .5s ease;
+  background-color: rgba($white, .8);
+  #logo-waas {
+    animation: goin .3s ease-in forwards;
+    @include media-breakpoint-down(sm) {
+      right: 0;
+      left: 0;
+    }
+  }
+  &.with-background {
+    transition: all .5s ease;
+    background-color: $white;
+    border-bottom: 6px solid $blue;
+    #logo-waas {
+      animation: goout .3s ease-out forwards;
+    }
+    @keyframes goout {
+      0%{
+        opacity: 1;
+      }
+      100%{
+        top: -35px;
+        opacity: 0;
+        display: none;
+      }
+    }
+
+    @keyframes goin {
+      0%{
+        top: -35px;
+        opacity: 0;
+        display: none;
+      }
+      100%{
+        opacity: 1;
+        display: block;
+      }
+    }
+    
+    #logotipo-waas {
+      display: flex;
+      @media (max-width:400px) {
+        width: 150px;  
+      }
+    }
+  }
+
+  &__brand {
+    min-width: 173px;
+    height: 60px;
+    #logo-waas {
+      height: 112px;
+      width: 173px;
+      margin: 0 auto;
+      position: absolute;
+      background-color: rgba($white, 1);
+      top: 0;
+      padding: 10px 10px 15px;
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0 10px 15px rgba($black, .2);
+    }
+  }
+  
+  .c-menu {
+    color: $blue;
+    @include media-breakpoint-down(lg) {
+      z-index: 999;
+    }
+
+    @include media-breakpoint-down(sm) {
+
+      .c-nav__item-link {
+        color: $white;
+      }
+
+    }
+    &__header {
+      // display: flex;
+      @include media-breakpoint-down(lg) {
+        display: flex;
+      }
+      display: none;
+      justify-content: space-between;
+      height: 70px;
+      align-items: center;
+      // opacity: .8;
+      @media (max-width:400px) {
+        height: 50px;  
+      }
+      .icon {
+        color: $blue;
+      }
+      button {
+        background: $blue;
+        border-radius: 50%;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        .icon {
+          color: $blue;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        .icon {
+          color: white;
+        }
+        button {
+          background: white;
+        }
+        #logo-waas {
+          display: none;
+        }
+        #logotipo-waas {
+          display: flex;
+          .st0 {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .c-search--toggle {
+    display: none;
+    color: $blue;
+    background: none;
+    border: none;
+    width: 50px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-direction: row;
+    &__brand {
+      order: 2;
+      margin: 0;
+      text-align: center;
+      .icon-waas {
+        &:before {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    &__btn-toggle {
+      order: 1;
+      display: block!important;
+    }
+
+    &__search {
+      order: 3;
+      .c-search__wrapper {
+        display: none;
+        opacity: 0;
+        transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      .c-search__input {
+        // display: none;
+      }
+      .c-search__append {
+        // margin: 0;
+      }
+      .c-search--toggle {
+        display: block;
+      }
+    }
+    &__list {
+      padding-left: 2rem;
+    }
+  }
+
+  .navbar-brand .icon {
+    font-size: 3rem;
+  }
+  &__menu {
+    @include media-breakpoint-down(lg) {
+      position: absolute;
+      background-color: $blue;
+      height: 100vh;
+      max-height: 100vmax;
+      width: 30vw;
+      top: 0;
+      bottom: 0;
+      // left: 0;
+      left: -100%;
+      padding: 1rem 1.5rem;
+      transition: all 0.3s cubic-bezier(0.73, 0.1, 0.45, 1);
+      box-shadow: 0px 00px 0 rgba(#000, 0.4);
+      &.active {
+        left: 0%;
+        box-shadow: 10px 0px 0 rgba(#000, 0.4);
+      }
+    }
+    @include media-breakpoint-down(md) {
+      width: 80vw;
+    }
+  }
+  &__btn-toggle {
+    border: none;
+    .icon {
+      color: $blue;
+    }
+  }
+  // &__list {
+  // }
+  // &__item {
+  // }
+  &__item-link {
+    font-size: $font-size-lg;
+    color: $blue;
+  }
+  @include media-breakpoint-down(lg) {
+  }
+}
+body {
+  position: relative;
+  .c-nav {
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  body.is-expanded {
+    .c-nav {
+      padding-bottom: 76px;
+      #logo-waas {
+        animation: goout .3s ease-out forwards;
+      }
+      #logotipo-waas {
+        display: flex;
+        @media (max-width:400px) {
+          width: 150px;  
+        }
+      }
+      &__wrapper {
+        display: block;
+        opacity: 1;
+        transition: all 1s ease;
+      }
+    }
+    
+    .c-nav__search {
+      .c-search__wrapper {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        left: 0;
+        top: 78px;
+        display: inline-block;
+        animation: input_search 1s ease .2s forwards;
+        transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+
+      @keyframes input_search {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .c-search__input {
+        display: inline-block;
+        position: absolute;
+        // top: 96px;
+        left: 0;
+        width: 90vw;
+        right: 0;
+        margin: 0 auto;
+      }
+      .c-search__append {
+        z-index: 9;
+        // margin-left: -20px;
+        position: absolute;
+        bottom: 2px;
+        right: 20px;
+      }
+    }
+  }
+}
+
+

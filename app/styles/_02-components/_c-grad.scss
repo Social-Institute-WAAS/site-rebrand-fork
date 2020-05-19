@@ -1,0 +1,50 @@
+.c-grad {
+    
+    &__display {
+        overflow-x: hidden;
+        // justify-content: center;
+        @include make-container();
+        @include make-container-max-widths();
+        padding: 1rem 0;
+        .card-deck {
+            justify-content: center;
+            .c-card {
+                margin-left: 1rem;
+                margin-right: 1rem;
+               &__img--circle {
+                    border: 2px solid $gray-200;
+                    box-shadow: 0px 10px 10px $gray-200;
+                }
+            }
+        }
+        
+        @include media-breakpoint-down(lg) {
+            overflow-x: auto;
+            .card-deck {
+                display: inline-flex;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                flex-direction: row;
+                > .c-card:first-child {
+                    margin-left: 2rem;
+                }
+            }
+        }
+        @include media-breakpoint-down(xs) {
+            .card-deck {
+                > .c-card:first-child {
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        & {
+            margin-right: -15px;
+            margin-left: -15px;
+            padding-left: 0!important;
+            padding-right: 0!important;
+        }
+    }
+}

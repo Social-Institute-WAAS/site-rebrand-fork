@@ -1,0 +1,49 @@
+//- METODOLOGIA - TEMPLATE FOR PAGES
+extends ../_00-toolbox/templates/master.pug
+
+block append pageTitle
+  - page.title = "Hackateen"+" | "+page.name
+  - page.current = "hackateen"
+
+block main
+
+  //- COVER
+  section.cover.l-pages
+
+    .l-pages__cover.c-card--cover(style="background-image:url(images/hackateen/bg-hackateen-ods.png)")
+
+    .container.l-pages__content(style="margin-top:-40vh; background-color:white; ")
+      .c-card.card.c-card--section.bullets.bullets--bottom-center.bullets--blue
+        h1.l-section__title.c-card__title.text-center(itemprop="name")
+          //- span.icon-lamp
+          span Hackateen ODS
+        .c-card__body.row
+          p.col-lg-8.col-sm-12.mx-auto
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+
+      .col-lg-8.col-sm-12.py-4.mx-auto
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+
+    .l-section.bg-blue
+      .container
+        h2.l-section__title.text-center.mb-4 
+          span Temas
+        .d-md-flex.justify-content-between.pb-4
+          a.w-25(href="#" target="_blank")
+            img.border-lg.rounded-lg(src="/images/svg/ods/ods-2.svg", alt="ODS 2 - Fome Zero e Agricultura Sustentável" style="border:3px solid #FFF")
+          a.w-25(href="#" target="_blank")
+            img.border-lg.rounded-lg(src="/images/svg/ods/ods-3.svg", alt="ODS 3 - Saúde e Bem-estar" style="border:3px solid #FFF")
+          a.w-25(href="#" target="_blank")
+            img.bg-white.border-lg.rounded-lg(src="/images/svg/ods/ods-4.svg", alt="ODS 4 - Educação de Qualidade" style="border:3px solid #FFF")
+
+          
+    .container
+      .col-lg-8.col-sm-12.py-4.mx-auto
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+        img.float-left.border-lg.rounded-lg.w-50.mr-2(src="/images/svg/ods/ods-2.svg", alt="ODS 2 - Fome Zero e Agricultura Sustentável" style="border:3px solid #FFF")
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+    
+   
+  //- NEWSLETTER
+  include ../_02-components/c-newsletter.pug

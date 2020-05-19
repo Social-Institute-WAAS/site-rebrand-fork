@@ -1,0 +1,75 @@
+#logo-waas {
+  display: flex;
+  height: 70px;
+  margin: .5rem;
+  // ORANGE
+  .st0{fill:#FFAA00;}
+  // NONE
+  .st1{fill:none;}
+  // BLUE
+  .st2{fill:#0000FF;}
+  // RED
+  .st3{fill:#FF433F;}
+  
+  #logotipo {
+    // .st2 {
+
+    // }
+  }
+  #raio {
+    // .st0 {
+
+    // }
+    // .st2 {
+
+    // }
+    // .st3 {
+
+    // }
+    // transform-origin: 50% 50%;
+    // animation: spark .3s ease .5s 3 forwards;
+  }
+  #simbolo {
+    // .st0 {
+
+    // }
+    // .st1 {
+
+    // }
+    // .st2 {
+
+    // }
+  }
+
+}
+#logotipo-waas {
+  .st0{fill:#0000FF;}
+  display: none;
+  height: 45px;
+  margin: .5rem 0;
+  align-self: center;
+}
+
+// @keyframes spark {
+//   from {
+//     transform: scale(1) translate(0px, 0px);
+//   }
+//   5% {
+//   transform: scale(1.1) translate(0px, 15px) skew(3deg, -45deg);
+//   }
+//   10% {
+//     transform: scale(1) translate(0px, 0px) skew(3deg, -15deg);
+//   }
+//   15% {
+//     transform: scale(1.1) translate(0px, 15px) skew(3deg, -45deg);
+//   }
+//   20% {
+//     transform: scale(1) translate(0px, 0px) skew(3deg, -18deg);
+//   }
+//   30% {
+//     transform: scale(1) translate(0px, 0px) skew(0deg, 0deg);
+//   }
+//   to {
+//     transform: scale(1) translate(0px, 0px);
+//   }
+// }

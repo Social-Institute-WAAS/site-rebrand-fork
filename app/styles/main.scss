@@ -1,0 +1,39 @@
+//00 TOOLBOX
+@import "node_modules/bootstrap/scss/functions";
+@import "_00-toolbox/variables";
+@import "_00-toolbox/settings";
+@import "_00-toolbox/fonts";
+
+//LIB
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+//PUSHY BUTTONS
+
+//01 ELEMENTS
+@import "./_01-elements/body";
+@import "./_01-elements/logo-waas";
+@import "./_01-elements/quotes";
+
+
+//02 COMPONENTS
+@import "./_02-components/c-card";
+@import "./_02-components/c-nav";
+@import "./_02-components/c-search";
+@import "./_02-components/c-grad";
+@import "./_02-components/c-grid";
+@import "./_02-components/c-buttons";
+@import "./_02-components/c-slider";
+@import "./_02-components/c-glide";
+@import "./_02-components/c-feed";
+@import "./_02-components/c-badge";
+@import "./_02-components/c-vitrine";
+
+
+//03 LAYOUTS
+@import "./_03-layouts/pages";
+@import "./_03-layouts/section";
+@import "./_03-layouts/footer";
+
+
+//04 PAPES
+@import "_04-pages/index";

@@ -1,0 +1,14 @@
+.blockquote p {
+  &:before {
+    font-family: 'icomoon';
+    content: "\e929";
+    font-size: $h1-font-size;
+    margin-right: .5rem;
+  }
+  &:after {
+    font-family: 'icomoon';
+    content: "\e928";
+    font-size: 1rem;
+    margin-left: .3rem;
+  }
+}
