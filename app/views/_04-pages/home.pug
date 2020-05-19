@@ -80,23 +80,103 @@ block main
           strong #NINJASWAAS
           |  se inspira nas habilidades das marciais.
 
-
-      .c-grad__display
-        .card-deck
-          - var etapas = ['Despertar', 'Aprender', 'Explorar', 'Prototipar', 'Desafiar', 'Aprimorar', 'Transmitir', 'Empoderar']
-
-          - var counter = 1
-          each val, index in etapas
+        .c-grad__display
+          .card-deck
             .c-card(style="width: 14.5rem").bullets.bullets--top-center
               .c-card__img.c-card__img--circle
-                img(src=`images/graduacao-${counter++}-${val.toLowerCase()}.jpg`).img-fluid
+                img(src=`images/graduacao-1-despertar.jpg`).img-fluid
               h3.c-card__title.text-center#metodologia.pt-3.pb-2
-                = val
               .c-card__body.text-center
-                p
-                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. 
-              .d-flex
-                a.c-btn.c-btn--df.c-btn--blue.c-btn--raio.w-100.d-flex(href='#').justify-content-center Leia mais
+              p
+                strong Objetivo
+                |  Conhecer a tecnologia como ferramenta.
+              p
+                strong Habilidade
+                |  Reconhecer que temos a capacidade de criar tecnologia.
+
+            .c-card(style="width: 14.5rem").bullets.bullets--top-center
+              .c-card__img.c-card__img--circle
+                img(src=`images/graduacao-2-aprender.jpg`).img-fluid
+              h3.c-card__title.text-center#metodologia.pt-3.pb-2
+              .c-card__body.text-center
+              p
+                strong Objetivo
+                |  Usar a internet como fonte de pesquisa e de conteúdo didático.
+              p
+                strong Habilidade
+                |  Aprender como aprender melhor, segurança na internet, senso crítico e motivacional para se auto desafiar.
+
+            .c-card(style="width: 14.5rem").bullets.bullets--top-center
+              .c-card__img.c-card__img--circle
+                img(src=`images/graduacao-3-explorar.jpg`).img-fluid
+              h3.c-card__title.text-center#metodologia.pt-3.pb-2
+              .c-card__body.text-center
+              p
+                strong Objetivo
+                |  Explorar as ferramentas tecnológicas.
+              p
+                strong Habilidade
+                |  Criatividade, design, ideação e pensamento crítico.
+
+            .c-card(style="width: 14.5rem").bullets.bullets--top-center
+              .c-card__img.c-card__img--circle
+                img(src=`images/graduacao-4-prototipar.jpg`).img-fluid
+              h3.c-card__title.text-center#metodologia.pt-3.pb-2
+              .c-card__body.text-center
+              p
+                strong Objetivo
+                |  Integrar os conhecimentos adquiridos para prototipar e resolver pequenos desafios.
+              p
+                strong Habilidade
+                |  Empreendedorismo, trabalho em grupo, compreensão de problemas, empatia.
+
+            .c-card(style="width: 14.5rem").bullets.bullets--top-center
+              .c-card__img.c-card__img--circle
+                img(src=`images/graduacao-5-desafiar.jpg`).img-fluid
+              h3.c-card__title.text-center#metodologia.pt-3.pb-2
+              .c-card__body.text-center
+              p
+                strong Objetivo
+                |  Resgatar e aplicar o conteúdo aprendido em uma gincana super animada, com desafios diversos.
+              p
+                strong Habilidade
+                |  Consolidar o conhecimento aprendido durante o semestre e fortalecer habilidades de trabalho em grupo.
+
+            .c-card(style="width: 14.5rem").bullets.bullets--top-center
+              .c-card__img.c-card__img--circle
+                img(src=`images/graduacao-6-aprimorar.jpg`).img-fluid
+              h3.c-card__title.text-center#metodologia.pt-3.pb-2
+              .c-card__body.text-center
+              p
+                strong Objetivo
+                |  Desenvolver habilidades que deseja aprimorar atrávez de um projeto de maior duração.
+              p
+                strong Habilidade
+                |  Autoavalição, Disciplina e Persistência.
+
+            .c-card(style="width: 14.5rem").bullets.bullets--top-center
+              .c-card__img.c-card__img--circle
+                img(src=`images/graduacao-7-transmitir.jpg`).img-fluid
+              h3.c-card__title.text-center#metodologia.pt-3.pb-2
+              .c-card__body.text-center
+              p
+                strong Objetivo
+                |  Transferir o conhecimento a outros ninjas.
+              p
+                strong Habilidade
+                |  Estruturação e apresentação de idéias e conceitos de maneira simples e compreensível.
+
+            .c-card(style="width: 14.5rem").bullets.bullets--top-center
+              .c-card__img.c-card__img--circle
+                img(src=`images/graduacao-8-empoderar.jpg`).img-fluid
+              h3.c-card__title.text-center#metodologia.pt-3.pb-2
+              .c-card__body.text-center
+              p
+                strong Objetivo
+                |  Ministrar oficinas para uma turma WAAS!
+              p
+                strong Habilidade
+                |  Conhecer profundamente os conceitos que são passados nas oficinas, responsabilidade e liderança.
 
   //- EVENTS
   section.l-section#eventos
