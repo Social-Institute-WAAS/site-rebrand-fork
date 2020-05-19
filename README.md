@@ -4,10 +4,11 @@ It's a fork from original repo. Here we simplified project folder structure and 
 ## Using
 Run the flow code:
 
-´´´
+
+```
 npm install
 gulp
-´´´
+```
 
 To build the project, and then, access files via browser or web server.
 
