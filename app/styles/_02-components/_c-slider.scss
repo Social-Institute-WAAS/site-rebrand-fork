@@ -1,0 +1,181 @@
+
+/* Slideshow container */
+.c-slider {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+
+.c-slider-indicator {
+  text-align:center;
+  position: absolute;
+  z-index: 99;
+  bottom:50px;
+  right:39px;
+  @include media-breakpoint-down(sm){
+    display: none;
+  }
+}
+
+.alert-has-scroll {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  font-size: $font-size-lg * 1.5;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all .5s ease ;
+  position: absolute;
+  bottom:0px;
+  left: 0;
+  // right: 0;
+  margin: 0 auto;
+  height: 40px;
+  width: 40px;
+  animation: arrowDown 2s infinite;
+  color: $orange;
+  z-index: 100;
+  &:before {
+      content: "\f078";
+      display: block;
+  }
+}
+
+@keyframes arrowDown {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+	40% {
+   transform: translateY(-70px);
+  }
+	60% {
+    transform:translateY(-35px);
+  }
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  margin: 0 .5rem;
+  // background-color: #bbb;
+  // border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  font-family: 'icomoon';
+  position: relative;
+  &:before {
+    content: "\e903";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    font-size: 3rem;
+    line-height: 1;
+    height: 2rem;
+    width: 2rem;
+    color: $white;
+    transition: all .5s ease;
+  }
+  &:after {
+    // content: "\e900";
+    // position: absolute;
+    // top: -25px;
+    // left: 15px;
+    // display: inline-block;
+    // font-size: 3rem;
+    // line-height: 1;
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    right: -1.5rem;
+    height: 1rem;
+    width: 2rem;
+    background-color: $white;
+    z-index: -1;
+  }
+  &:last-child{
+    &:after {
+
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 1rem;
+      left: 2.5rem;
+      height: 1rem;
+      width: 70px;
+      background-color: $white;
+      z-index: -1;
+    }
+  }
+}
+
+.active, .dot:hover {
+  // background-color: #717171;
+  &:before {
+    color: $orange;
+  }
+  &:after {
+
+  }
+}
+
+/* Fading animation */
+.fadeFx {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+span.typer {
+  width: .01rem;
+  margin-left: .5rem;
+  border-right: .01rem solid;
+  // animation: caret 1s steps(1) infinite;
+  border-color: transparent;
+  position: relative;
+  &:before{
+    content:'';
+    height: 100%;
+    width: 2rem;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    background-color: $orange;
+    animation: caret 1s steps(1) infinite;
+  }
+}
+
+@keyframes caret {
+  50% {
+    background-color: transparent;
+  }
+}
+
+// @keyframes caret {
+//   50% {
+//     border-color: transparent;
+//   }
+// }

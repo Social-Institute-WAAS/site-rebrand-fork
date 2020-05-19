@@ -1,0 +1,31 @@
+.c-search {
+    &__input {
+        border-radius: $btn-border-radius!important;
+        // border-width: 0;
+        background-color: rgba($color: $gray-200, $alpha: .5);
+        border: 2px solid $blue;
+        color: $blue;
+        &.form-control{
+            padding-right: 65px;
+        }
+        &::placeholder {
+            color: rgba($blue, .7);
+        }
+    }
+    &__append {
+        z-index: 9;
+        margin-left: -63px;
+        button:hover{
+            cursor: pointer;
+        }
+        .icon-search {
+            color: $blue;
+        }
+    }
+    &__wrapper.focus {
+        .c-search__append .icon-search {
+            color: $blue;
+        }
+    }
+    
+}

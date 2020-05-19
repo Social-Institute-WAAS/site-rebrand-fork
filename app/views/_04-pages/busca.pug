@@ -1,0 +1,34 @@
+//- Busca
+extends ../_00-toolbox/templates/master.pug
+
+block append pageTitle
+  - page.title = "Buscas Encontradas"+" | "+page.name
+  - page.current = "busca"
+
+
+block main
+
+  //- NEWSLETTER
+  section.l-section.l-section-busca.mb-4#newsletter
+    .container
+      .c-card.c-card--section.c-card-newsletter.mx-auto.bullets
+        .row.justify-content-center
+          h1.l-section__title.c-card__title.text-center.m-0
+            span Buscas encontradas para 
+            //- span.js-searched Pesquisada
+        .row.justify-content-center
+          //- <script async src="https://cse.google.com/cse.js?cx=012713980972740920291:kglxojod0jq"></script>
+          form#search_form_result.gcse-searchbox-only.col-12(method="get" target="_self"  data-gname="storesearch" )
+            .input-group.input-group-lg
+              input.form-control.c-search__input(type="text" name="q" title="search" autocomplete="on" placeholder="Buscar" aria-label="Buscar" )
+              .input-group-append.c-search__append
+                button.btn.py-1(type="submit")
+                  span.icon.icon-search
+                  span.sr-only Buscar
+        .row
+          .col-12
+            <script async src="https://cse.google.com/cse.js?cx=012713980972740920291:kglxojod0jq"></script>
+            <div class="gcse-searchresults-only" data-gname="storesearch"></div>
+
+block scripts
+  <script src="scripts/querySearched.js"></script>

@@ -1,0 +1,24 @@
+.c-badge {
+  padding: $badge-padding-y $badge-padding-x;
+  border-radius: $badge-border-radius;
+  background-color: $gray-200;
+  color: $gray-700;
+  font-size: $tooltip-font-size;
+  margin-right: .25rem;
+  & + .c-badge {
+    margin:.25rem;
+  }
+  &:before {
+    content: '#';
+    margin-right: .25rem;
+  }
+  &:hover {
+    background-color: darken($gray-200, 10%);
+    text-decoration: none;
+    color: $gray-700;
+  }
+  &:active {
+    background-color: darken($gray-200, 20%);
+    color: $gray-900;
+  }
+}

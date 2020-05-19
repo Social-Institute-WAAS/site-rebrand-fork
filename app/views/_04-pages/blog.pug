@@ -1,0 +1,96 @@
+extends ../_00-toolbox/templates/master.pug
+
+block append pageTitle
+  - page.title = "Blog"+" | "+page.name
+  - page.current = "blog"
+
+block main
+
+  section.row.c-vitrine.py-4
+    .container.c-vitrine__grid
+      .c-vitrine__main
+        .c-vitrine__content(style="background-image: url('images/jovem-pesquisando.jpeg')")
+          a.c-vitrine__link(href='#')
+            .c-content
+              .c-content__tags
+                span.c-badge Hackateen
+                span.c-badge NinjasWAAS
+              .c-content__space
+              .c-content__heading
+                h3.c-content__title Post Hello
+                span.c-content__author Autor do Post
+      .c-vitrine__sidebar.c-sidebar
+        .c-sidebar__container
+          .c-sidebar__item
+            .c-vitrine__content(style="background-image: url('images/jovem-pesquisando.jpeg')")
+              a.c-vitrine__link(href='#')
+                .c-content
+                  .c-content__tags
+                    span.c-badge Hackateen
+                    span.c-badge NinjasWAAS
+                  .c-content__space
+                  .c-content__heading
+                    h3.c-content__title Post Hello
+                    span.c-content__author Autor do Post
+              
+          .c-sidebar__item
+            .c-vitrine__content(style="background-image: url('images/jovem-pesquisando.jpeg')")
+              a.c-vitrine__link(href='#')
+                .c-content
+                  .c-content__tags
+                    span.c-badge Hackateen
+                    span.c-badge NinjasWAAS
+                  .c-content__space
+                  .c-content__heading
+                    h3.c-content__title Post Hello
+                    span.c-content__author Autor do Post
+              
+          
+  
+  //- POST
+  section.l-section.c-feed
+    .container
+      -var counter = 0
+      +repeat(5)
+        //- POST 1 ######################### 
+        - var myArray = ['default', 'blue', 'orange', 'red', 'default']
+        - var colorIndex = myArray[(myArray.length - counter++) | 0]
+        //- - var randColor = myArray[Math.floor(Math.random() * myArray.length) | 0]
+      
+        //- =randColor
+        div(class=`${ (colorIndex != 'default') ? 'bullets--'+colorIndex : '' }`).c-card.c-card--section.bullets.bullets--right
+          .row
+            .col-lg-4.col-sm-12
+              figure.l-section__img.c-card__img
+                img(src="images/jovem-pesquisando.jpeg", alt="Jovem Pesquisando")
+            .col-lg-8.col-sm-12
+              .c-card__heading.mb-4
+                .c-card__tags
+                  a(href="#").c-badge Hackateen
+                  a(href="#").c-badge NinjasWAAS
+                h3.l-section__title.c-card__title.text-left.py-0.mt-2 Post Hello
+                span.text-muted Autor do Post
+              .c-card__body
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+              .c-card__link
+                a.c-btn.c-btn--df.c-btn--blue.c-btn--raio(href='#').d-flex Leia mais
+        br
+
+  //- PAGINATION
+  nav.container.d-flex
+    ul.pagination.pagination-lg.mx-auto
+      - var counter = 0;
+      li.page-item 
+        a.page-link(href="#" aria-label="Anterior")
+          span(aria-hidden="true") &laquo;
+          span.sr-only Anterior
+      +repeat(5)
+        li.page-item
+          a.page-link(href="#") #{counter++}
+
+      li.page-item 
+        a.page-link(href="#" aria-label="Próximo")
+          span( aria-hidden="true") &raquo;
+          span.sr-only Próximo
+        

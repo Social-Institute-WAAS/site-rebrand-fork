@@ -1,0 +1,54 @@
+//- METODOLOGIA - TEMPLATE FOR PAGES
+extends ../_00-toolbox/templates/master.pug
+
+block append pageTitle
+  - page.title = "Metodologia"+" | "+page.name
+  - page.current = "metodologia"
+
+block main
+
+  //- COVER
+  section.cover.l-pages
+
+    .l-pages__cover.c-card--cover(style="background-image:url(https://placeimg.com/780/1080/any); background-position: 70% center;")
+    .container.l-pages__content(style="margin-top:-40vh; background-color:white; ")
+      .c-card.card.c-card--section.bullets.bullets--bottom-center
+        h1.l-section__title.c-card__title.text-center(itemprop="name")
+          span Título do artigo
+        .c-card__body.row
+          p.h3.col-lg-8.col-sm-12.mx-auto.text-center
+            | Breve descrição sobre o conteúdo que será abordado.
+     
+
+      .col-lg-8.col-sm-12.py-4.mx-auto
+        img.float-left.border-lg.rounded-lg.w-50.mr-2(src="https://placeimg.com/600/600/any" alt="Imagem" style="border:3px solid #FFF")
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+
+    .l-section.bg-blue
+      .container
+        .col-md-9.col-sm-12.col-xs-12.mx-auto.text-center
+          blockquote.blockquote.my-4.px-4.mx-4
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum.
+
+    
+    .container
+      .col-lg-8.col-sm-12.py-4.mx-auto
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+        img.float-right.border-lg.rounded.w-100.my-4(src="https://placeimg.com/600/400/any" alt="Imagem" style="border:3px solid #FFF")
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+    
+    .l-section.bg-gray
+      .container
+        .col-md-9.col-sm-12.col-xs-12.mx-auto.text-center
+          blockquote.blockquote.my-4.px-4.mx-4
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum.
+    
+    .container
+      .col-lg-8.col-sm-12.py-4.mx-auto
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tempor accumsan diam. Maecenas in pretium purus. Aenean fringilla eleifend bibendum. Integer efficitur nulla eget congue bibendum. Praesent convallis nisi ut magna pharetra condimentum. Vestibulum cursus, arcu non aliquet fermentum, magna sem suscipit urna, a convallis nunc lectus eget urna. Praesent tristique ligula non purus fermentum dignissim.
+  
+  //- NEWSLETTER
+  include ../_02-components/c-newsletter.pug

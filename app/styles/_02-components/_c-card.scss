@@ -1,0 +1,272 @@
+.c-card {
+  // background-color: $gray-200;
+  //border: solid 8px $gray-400;
+  box-shadow: 0 0 0 0.6rem $gray-400;
+  padding: $card-spacer-y $card-spacer-x;
+  border-radius: $card-border-radius;
+  margin: 1rem 0 2rem;
+  &.bullets {
+    position: relative;
+    .c-card__title {
+      color: $gray-600;
+    }
+    &:before {
+      font-family: "icomoon" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      font-size: $font-size-lg * 1.3;
+      content: "\e904";
+      position: absolute;
+      bottom: -25px;
+      left: 34px;
+      z-index: 2;
+      color: $gray-400;
+    }
+    &:after {
+      content: "";
+      background-color: $white;
+      position: absolute;
+      bottom: -10px;
+      height: 12px;
+      width: 114px;
+      left: 38px;
+      z-index: 1;
+    }
+    // BULLETS RIGHT
+    &--right {
+      &:before {
+        left: unset;
+        right: 43px;
+      }
+      &:after {
+        left: unset;
+        right: 48px;
+      }
+    }
+
+    //BULLETS TOP CENTER
+    &--top-center {
+      &:before {
+        bottom: unset;
+        left: 0;
+        top: -23px;
+        right: 0;
+        text-align: center;
+      }
+      &:after {
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+
+    //BULLETS TOP CENTER
+    &--bottom-center {
+      &:before {
+        bottom: unset;
+        left: 0;
+        bottom: -26px;
+        right: 0;
+        text-align: center;
+      }
+      &:after {
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+
+    // BULLETS ORANGE
+    &--orange {
+      .c-card__title {
+        color: $orange;
+      }
+      box-shadow: 0 0 0 0.6rem $orange;
+      &:before {
+        color: $orange;
+      }
+    }
+
+    // BULLETS BLUE
+    &--blue {
+      .c-card__title {
+        color: $blue;
+      }
+      box-shadow: 0 0 0 0.6rem $blue;
+      &:before {
+        color: $blue;
+      }
+    }
+
+    // BULLETS RED
+    &--red {
+      .c-card__title {
+        color: $red;
+      }
+      box-shadow: 0 0 0 0.6rem $red;
+      &:before {
+        color: $red;
+      }
+    }
+    // BULLETS BLUE
+    &--blue {
+      .c-card__title {
+        color: $blue;
+      }
+      border-color: $blue;
+      &:before {
+        color: $blue;
+      }
+    }
+  } // end bullets
+
+  &__title {
+    font-weight: 900;
+    color: $gray-600;
+  }
+  &__img {
+    overflow: hidden;
+    margin: $card-spacer-y $card-spacer-x;
+    &--circle {
+      border-radius: 50%;
+    }
+  }
+
+  &__body {
+    color: $gray-600;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: underline;
+    text-decoration: none;
+    @include media-breakpoint-down(sm) {
+      .c-btn {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+
+  // COVER ##################
+  &--cover {
+    padding: $jumbotron-padding;
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin: calc(-70px - 15px - 0.7rem) -15px 30px;
+    min-height: 480px;
+    background-size: cover;
+    background-position: center center;
+    // border: solid 8px $blue;
+    border: none;
+    border-radius: 0;
+    position: relative;
+    &:before {
+      content: "";
+      z-index: 2;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // background-blend-mode: multiply;
+      mix-blend-mode: color;
+      opacity: 0.6;
+      background-image: linear-gradient(
+        rgba($blue, 1),
+        rgba($blue, 0.7),
+        rgba($blue, 1)
+      );
+    }
+    &:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+      z-index: 0;
+      content: "";
+      mix-blend-mode: overlay;
+      background: transparent url(../images/pattern.png) repeat top left;
+    }
+    @include media-breakpoint-down(sm) {
+      height: 100vh;
+      min-height: 300px;
+      padding: 0 0.2rem;
+    }
+
+    .container {
+      z-index: 9;
+    }
+    .c-card__title {
+      font-size: $font-size-xl * 1.3;
+      color: $white;
+      font-weight: 700;
+      z-index: 9;
+      width: 55%;
+      //border-left: 8px solid $white;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+      // text-shadow: -3px 2px 0px $blue;
+      text-shadow: -3px 2px 0 $blue, 1px -1px 0 $blue, -1px 1px 0 $blue,
+        1px 1px 0 $blue;
+      -webkit-text-stroke: 1px $blue;
+      position: relative;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 3rem;
+        padding-bottom: 15vh;
+        width: 100%;
+      }
+      @media (max-width: 400px) {
+        font-size: 2.2rem;
+        width: 55%;
+      }
+    }
+  }
+
+  // SECTION #################
+  &--section {
+    padding: $jumbotron-padding;
+    // margin-bottom: 4rem!important;
+    @include media-breakpoint-down(sm) {
+      .card-deck {
+        flex-direction: row;
+        flex-wrap: wrap;
+        .c-card {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  // NEWLETTER
+  &-newsletter {
+    width: 75%;
+    @include media-breakpoint-down(md) {
+      padding: 1rem 0.5rem;
+      width: 100%;
+      .c-social-buttons {
+        flex-direction: column;
+      }
+    }
+    .c-social-buttons {
+      display: flex;
+      .c-btn {
+        padding: 1rem;
+        margin: 1rem 0;
+        font-size: 1rem;
+      }
+    }
+  }
+} // \ end .c-card

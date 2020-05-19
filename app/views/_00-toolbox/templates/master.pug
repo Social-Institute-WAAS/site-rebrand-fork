@@ -1,0 +1,14 @@
+include ../config/page.pug
+doctype
+html(lang="pt-br")
+	include  ../partials/head.pug
+	include  ../partials/head_scripts.pug
+	include ../mixins/mixins.pug
+	include ../../_01-elements/e-mixins.pug
+	include ../../_02-components/c-mixins.pug
+	body#site(itemtype="http://schema.org/WebPage")
+		include ../../_02-components/c-nav.pug
+		main.container-fluid(role="main")
+			block main
+		include ../../_03-layouts/l-footer.pug
+		include ../partials/footer_scripts.pug
