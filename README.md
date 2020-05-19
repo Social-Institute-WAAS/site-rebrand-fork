@@ -19,4 +19,6 @@ To build the project, and then, access files via browser or web server.
     └── build    # The project build goes here. Do not change files here! Any alteration will be lost.
 
 ## Next actions
-- [ ] Update landing page with new content.
+- [ ] Update landing page with new content;
+- [ ] Minify JS;
+- [ ] Minify HTML;
