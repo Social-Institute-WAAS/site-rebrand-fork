@@ -252,85 +252,17 @@ block main
                   img.img-fluid.rounded(src="images/conquistas/ninja-waas-in-harvard.jpeg")
                   .clearfix
                   .pt-2.pb-4.text-center
-                    span Ninja WAAS em Harvard
-
-
-        //- .glide__arrows(data-glide-el='controls')
-        //-   button.glide__arrow.glide__arrow--left(data-glide-dir="<") prev
-        //-   button.glide__arrow.glide__arrow--right(data-glide-dir=">") next    
+                    span Ninja WAAS em Harvard   
 
         .glide__bullets(data-glide-el='controls[nav]' style="bottom: -15px")
           - var counter = 0
           +repeat(4)
             button.glide__bullet(data-glide-dir=`=${counter++}`)
   
-  //- MAIS CONQUISTAS
-  section#mais-conquistas.l-section
-    .container
-      h2.l-section__title.text-primary.d-flex.align-items-center
-        span.icon-line-chart
-        span.px-4 Mais conquistas
-      .row
-        .col-md-4.text-center.text-black-50
-          h3.mt-2.d-flex.flex-column.justify-content-center 
-            strong 
-              span.icon-raio(role='icon')
-              span.h1.font-weight-bold +1000
-            span Ninjas graduados
-
-        .col-md-4.text-center.text-black-50
-          h3.mt-2.d-flex.flex-column.justify-content-center 
-            strong 
-              span.icon-raio(role='icon')
-              span.h1.font-weight-bold 9
-            span Cidades
-        
-        .col-md-4.text-center.text-black-50
-          h3.mt-2.d-flex.flex-column.justify-content-center 
-            strong
-              span.icon-raio(role='icon')
-              span.h1.font-weight-bold 12
-            span Hackateens 
-
-  //- PARTNERS
-  section#parceiros.l-section.l-section-partners(style="background-color: #fff;")
-    .container
-      h2.l-section__title.text-primary
-        span.icon-partners-claping-hands
-        //- span.icon-multiple-users-silhouette
-        span Parceiros
-      .d-flex.flex-wrap.justify-content-center
-          a.l-section-partners__item(href="http://www.institutorobertbosch.org.br" target="_blank").text-center.p-2
-            img.img-fluid(src="images/parceiros/instituto-robert-bosch.jpg" alt='Instituto Robert Bosch')
-          
-          a.l-section-partners__item(href="http://jupter.co/" target="_blank").text-center.p-2
-            img.img-fluid(src="images/parceiros/jupter.jpg" alt='JUPTER')   
-          
-          a.l-section-partners__item(href="http://aliancaempreendedora.org.br/" target="_blank").text-center.p-2
-            img.img-fluid(src="images/parceiros/alianca-empreendedora.png" alt='Aliança Empreendedora')
-          
-          a.l-section-partners__item(href="https://br.usembassy.gov/pt/" target="_blank").text-center.p-2
-            img.img-fluid(src="images/parceiros/consulado-eua.png" alt='Embaixada EUA')   
-
-          a.l-section-partners__item(href="https://institutolegado.org/" target="_blank").text-center.p-2
-            img.img-fluid(src="images/parceiros/legado.png" alt='Instituto Legado')
-          
-          a.l-section-partners__item(href="https://vps.org.br/" target="_blank").text-center.p-2
-            img.img-fluid(src="images/parceiros/projeto-vida.png" alt='Vida Promoção Social')   
-          
-          a.l-section-partners__item(href="https://www.sistemafiep.org.br/" target="_blank").text-center.p-2
-            img.img-fluid(src="images/parceiros/senai-azul.jpg" alt='Sistema FIEP')
-          
-          a.l-section-partners__item(href="http://cmaker.com.br/" target="_blank").text-center.p-2
-            img.img-fluid(src="images/parceiros/espaco-cmaker.png" alt='Espaço CMaker')   
-
-
-    include ../_03-layouts/l-depoimentos.pug
-  
-  //- NO QUE A COMUNIDADE ESTÁ FALANDO SOBRE NÓS
+  include ../_03-layouts/l-mais-consquistas.pug
+  include ../_03-layouts/l-parceiros.pug
+  include ../_03-layouts/l-depoimentos.pug
   include ../_03-layouts/l-noticias.pug
-    
-  //- NEWSLETTER
   include ../_02-components/c-newsletter.pug
 
   block scripts
