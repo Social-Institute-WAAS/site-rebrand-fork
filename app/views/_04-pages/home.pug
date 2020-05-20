@@ -322,7 +322,7 @@ block main
             img.img-fluid(src="images/parceiros/senai-azul.jpg" alt='Sistema FIEP')
           
           a.l-section-partners__item(href="http://cmaker.com.br/" target="_blank").text-center.p-2
-            img.img-fluid(src="images/parceiros/instituto-robert-bosch.jpg" alt='Espaço CMaker')   
+            img.img-fluid(src="images/parceiros/espaco-cmaker.png" alt='Espaço CMaker')   
 
   //- DEMPOIMENTOS
   section.l-section#depoimentos
@@ -380,7 +380,17 @@ block main
           span O que estão falando sobre nós
         .c-card__body.h-100
           .c-grid.js-gallery--news
-            +repeat(6)
+            .c-grid__item.c-card.text-center.bg-transparent.border-0
+              a.c-grid__link(href='https://jornaldacic.com.br/2019/09/04/raul-guedes-o-menino-que-foi-pra-nasa-agora-vai-para-harvard/' target='_blank')
+                .c-card-img-top
+                  img(src="images/clipping/o-menino-que-foi-pra-nasa-agora-vai-para-harvard.png" alt="Imagem").rounded   
+                .c-card__body
+                  //- h4.c-card__title Card Title
+                  p.card-text 
+                    | O Menino que foi para a NASA, agora vai para HAVARD
+    
+          
+            +repeat(0)
               .c-grid__item.c-card.text-center.bg-transparent.border-0
                 a.c-grid__link(href='https://jornaldacic.com.br/2019/09/04/raul-guedes-o-menino-que-foi-pra-nasa-agora-vai-para-harvard/' target='_blank')
                   .c-card-img-top
