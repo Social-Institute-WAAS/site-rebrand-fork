@@ -1,0 +1,41 @@
+section#conquistas.l-section.bg-blue
+    .container
+      h2.l-section__title
+        span.icon-trophy-cup-silhouette
+        span.px-2 Conquistas
+      .glide.glide-default
+        .glide__track.mb-4(data-glide-el='track')
+          ul.glide__slides
+            
+            li.glide__slide
+                a.text-white(href='https://www.facebook.com/InstitutoLegado/photos/a.297510197020038/1333520163419031/?type=3&theater' target="_blank")
+                  img.img-fluid.rounded(src="images/conquistas/premio-legado-2017-de-empreendedorismo-social.jpg")
+                  .clearfix
+                  .pt-2.pb-4.text-center
+                    span Prêmio Legado de Empreendedorismo Social - 2017
+
+            li.glide__slide
+                a.text-white(href='https://jornaldacic.com.br/2017/10/09/da-cic-para-a-nasa/' target="_blank")
+                  img.img-fluid.rounded(src="images/conquistas/mission-to-nasa.jpg")
+                  .clearfix
+                  .pt-2.pb-4.text-center
+                    span Mission to NASA - 2018
+            
+            li.glide__slide
+                a.text-white(href='https://globoplay.globo.com/v/7562927/' target="_blank")
+                  img.img-fluid.rounded(src="images/conquistas/ninjas-waas-inun.jpeg")
+                  .clearfix
+                  .pt-2.pb-4.text-center
+                    span INUN: Monitoramento de enchentes - 2019
+
+            li.glide__slide
+                a.text-white(href='https://g1.globo.com/pr/parana/noticia/2019/11/18/estudante-de-curitiba-que-criou-aplicativo-para-avisar-moradores-sobre-enchentes-ganha-bolsa-em-harvard.ghtml' target="_blank")
+                  img.img-fluid.rounded(src="images/conquistas/ninja-waas-in-harvard.jpeg")
+                  .clearfix
+                  .pt-2.pb-4.text-center
+                    span Ninja WAAS em Harvard   
+
+        .glide__bullets(data-glide-el='controls[nav]' style="bottom: -15px")
+          - var counter = 0
+          +repeat(4)
+            button.glide__bullet(data-glide-dir=`=${counter++}`)
