@@ -21,8 +21,9 @@ function buildCSS(){
 
 function buildImages(){
     return src('./app/images/**/*')
+    .pipe(dest('./build/images/'))
     .pipe(src('./app/*.png'))
-    .pipe(dest('./build/images/'));
+    .pipe(dest('./build/'));
 }
 
 function buildJS(){
