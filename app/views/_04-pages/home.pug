@@ -6,46 +6,8 @@ block append pageTitle
 
 block main
 
-  //- COVER
-  section#home.cover.c-slider
-    .c-slider-indicator
-      span.dot(onclick="currentSlide(1)")
-      span.dot(onclick="currentSlide(2)")
-      span.dot(onclick="currentSlide(3)")
-
-    .c-card.c-card--cover.mySlides.fadeFx(style="background-image:url(images/bg-cover.jpg)")
-      .container
-        h1.c-card__title
-          | Tecnologia Fortalecendo Jovens
-
-    .c-card.c-card--cover.mySlides.fadeFx(style="background-image:url(images/jovem-pesquisando.jpeg)")
-      .container
-        h2.c-card__title
-          | Transforme Sua Comunidade
-
-    .c-card.c-card--cover.mySlides.fadeFx(style="background-image:url(images/bg-time.jpeg)")
-      .container
-        h2.c-card__title
-          | Fortalecer Jovens
-  
-    span.alert-has-scroll
-
-  section.l-section#sobre-nos
-    .container
-      .c-card.c-card--section.bullets.bullets--top-center
-        figure.l-section__img.c-card__img
-          img(src="images/equipe.jpg", alt="Jovem Pesquisando")
-        h2.l-section__title.c-card__title.text-center.text-warning
-          span.icon-raio
-          span Sobre Nós
-        .c-card__body
-          p Nós somos uma organização social e acreditamos que tecnologia e correta orientação entregue a jovens, transformaram positivamente suas comunidades.
-          p Encorajamos nossos jovens a resolverem problemas, a explorarem tecnologias e acreditarem mais em si.
-          p Vemos a tecnologia como um meio para amplificar o impacto das ideias e das ações das pessoas.
-          p A cada semestre oferecemos oportunidade para jovens aprenderem novas tecnologias, e desenvolverem soluções reais para problemas de sua comunidade.
-          p Diante de situações extremamente adversas encontradas em comunidades carentes, nos inspiramos nos empreendedores para incentivar soluções criativas, habilidades "Ninjas" para encarar e solucionar os problemas.
-          p Acreditamos fortemente em juntar as pessoas para fortalecer a comunidade, e pavimentar um futuro melhor para todos.
-
+  include ../_03-layouts/l-cover.pug
+  include ../_03-layouts/l-sobre-nos.pug
   include ../_03-layouts/l-metodologia.pug    
   include ../_03-layouts/l-sistema-de-graduacao.pug
   include ../_03-layouts/l-eventos.pug
