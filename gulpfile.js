@@ -2,12 +2,16 @@ const {series, dest, src} = require('gulp');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
-const uglify = require('gulp-uglify');
+const htmlmin = require('gulp-htmlmin');
 
 function buildHTML(){
     return src('./app/views/_04-pages/*.pug')
-    .pipe(pug({
-        pretty: true
+    .pipe(pug())
+    .pipe(htmlmin({
+        removeComments: true,
+        removeCommentsFromCDATA: true,
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
     }))
     .pipe(dest('./build/'));
 }
@@ -28,7 +32,6 @@ function buildImages(){
 
 function buildJS(){
     return src('./app/scripts/**/*.js')
-//    .pipe(uglify())
     .pipe(dest('./build/scripts/'));
 }
 
@@ -36,6 +39,5 @@ function buildFonts(){
     return src('app/assets/fonts/**/*.{eot,svg,ttf,woff,woff2}')
     .pipe(dest('./build/assets/fonts/'));
 }
-
 
 exports.default = series(buildHTML, buildCSS, buildImages, buildJS, buildFonts);
