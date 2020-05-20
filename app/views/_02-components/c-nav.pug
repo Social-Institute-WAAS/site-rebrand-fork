@@ -17,7 +17,7 @@ nav#navbar.c-nav.navbar.navbar-expand-lg.fixed-top.mb-4
 					span.icon.icon-close(role="icon")
 
 			ul.navbar-nav.mr-auto.c-nav__list
-				- var menu = [['Sobre nós', 'sobre-nos.html'], ['Metodologia','metodologia.html'], ['Hackateen','hackateen.html'],['Blog','blog.html'], ['Contato','contato.html']]
+				- var menu = [['Sobre nós', '#sobre-nos'], ['Metodologia','#metodologia'], ['Hackateen','#eventos'], ['Contato','#contato']]
 				each val, index in menu
 					li.nav-item.c-nav__item
 						a.nav-link.c-nav__item-link(href=`${val[1]}`)= val[0]
