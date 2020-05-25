@@ -34,3 +34,4 @@ To build the project, and then, access files via browser or web server.
 - [ ] Create a partials directory, with main page parts;
 - [ ] Move every image to app/images directory;
 - [ ] Configure pipelines to automation deploy; 
+- [ ] Change favicons background to white, convert to jpg.
